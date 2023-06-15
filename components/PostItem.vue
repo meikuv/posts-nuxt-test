@@ -8,9 +8,7 @@
           {{ post?.description }}
         </p>
         <p class="card-text">
-          <NuxtLink
-            :to="{ name: 'post-id', params: { id: post.id } }"
-          >
+          <NuxtLink :to="{ name: 'post-id', params: { id: post.id } }">
             Continue reading...
           </NuxtLink>
         </p>
@@ -93,9 +91,16 @@ button {
 .liked {
   color: #ee3529;
 }
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 810px) {
   .card {
     font-size: 0.9em;
+    flex-direction: column;
+  }
+  .card img {
+    max-width: 100%;
+    max-height: 180px;
+    padding: 0.5em;
+    border-radius: 0.7em;
   }
 }
 </style>
