@@ -1,5 +1,5 @@
 <template>
-  <spinner v-if="loading" style="position: absolute; top: 50%; left: 47%" />
+  <spinner v-if="loading" class="spinner-center" />
   <section v-if="!loading && posts.length > 0">
     <post-item v-for="item in posts" :key="item?.id" :post="item" />
   </section>
@@ -13,3 +13,10 @@ defineProps<{
   loading: boolean;
 }>();
 </script>
+
+<style lang="scss" scoped>
+.spinner-center {
+  text-align: center;
+  margin-top: 250px;
+}
+</style>

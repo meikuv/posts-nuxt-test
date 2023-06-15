@@ -1,5 +1,5 @@
 <template>
-  <spinner v-if="getLoading" style="position: absolute; top: 50%; left: 47%" />
+  <spinner v-if="getLoading" class="spinner-center" />
   <div class="blog-single gray-bg" v-else>
     <div class="container">
       <div class="row align-items-start">
@@ -76,6 +76,10 @@ onMounted(async () => {
 <style lang="scss" scoped>
 body {
   margin-top: 20px;
+}
+.spinner-center {
+  text-align: center;
+  margin-top: 250px;
 }
 .blog-aside .widget {
   box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
