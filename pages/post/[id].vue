@@ -77,9 +77,6 @@ onMounted(async () => {
 body {
   margin-top: 20px;
 }
-.gray-bg {
-  background-color: #f5f5f5;
-}
 .blog-aside .widget {
   box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
   border-radius: 5px;
