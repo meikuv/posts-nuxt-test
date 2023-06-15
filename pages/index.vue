@@ -1,8 +1,6 @@
 <template>
-  <div class="main-container">
-    <Search v-model:model-value="search" style="margin: auto" />
-    <post-list :posts="filterPosts" :loading="getLoading" />
-  </div>
+  <Search v-model:model-value="search" style="margin: auto" />
+  <post-list :posts="filterPosts" :loading="getLoading" />
 </template>
 
 <script setup lang="ts">
@@ -29,10 +27,3 @@ onMounted(async () => {
   postStore.fetchPosts();
 });
 </script>
-
-<style lang="scss" scoped>
-.main-container {
-  width: 1350px;
-  margin: 0 auto;
-}
-</style>
